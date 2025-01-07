@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div>
+    <h1>Books are the Best</h1>
+</div>
+
+{% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+{% endfor %}
+
+<style>
+    div{
+        border: 2px orange solid;
+        border-radius: 20%;
+        background-color: orange;
+    }
+    h1{
+        color: aliceblue;
+        font-weight: bolder;
+        font-style: italic;
+    }
+</style>
+
+</body>
+</html>

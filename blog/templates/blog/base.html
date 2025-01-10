@@ -9,7 +9,10 @@
     </head>
     <body>
         <header>
-            <h1><a id="tiHe" href="/">Books for sales</a></h1>
+            <h1 id="h1ba"><a id="tiHe" href="/">Books for sales</a></h1>
+            <div id="dileft" >
+                <p></p>
+            </div>
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu">
                     {% include './icons/file-earmark-plus.svg' %}
@@ -21,46 +24,146 @@
     </body>
 </html>
 
+
 <style>
     body{
         margin-left: 100px;
         background-color: aliceblue;
     }
-    /*-------------header---------------*/
+
+    /*---------------base.html-------------------------------------------------*/
     header{
+        z-index: 3;
         background-color: orange;
         border-radius: 20px;
-        width: 80%;
+        width: 90%;
         margin-left: 6%;
         margin-top: 20px;
         padding-top: 2px;
         margin-bottom: 20px;
-        height: 85px;
+        height: 150px;
         text-align: center;
+        display: grid;
     }
     #tiHe{
+        z-index: 4;
         text-decoration: none;
         color: aliceblue;
-        font-style: italic;
-        font-size: 60px;
+        font-style: georgia;
+        font-size: 80px;
+        width: 100px;
+        height: 40px;
+    }
+    #h1ba{
+        padding-top: 20px;
+        margin-left: -680px;
+    }
+    #dileft{
+        z-index: -1;
+        width: 200px;
+        height: 3100px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: orange;
+        margin-left: -170px;
+        margin-top: -126px;
+    }
+    .top-menu{
+        z-index: 5;
+        width: 100px;
+        margin-top: -3030px;
+        margin-left: 600px;
+        
     }
 
-    /*-------------posts---------------*/
+    /*---------------post_list.html-------------------------------------------------*/
     article{
+        width: 800px;
         margin-left: 10%;
+        margin-bottom: 40px;
+        background-color: rgba(63, 62, 62, 0.255);
+        border-radius: 5px;
+        padding: 15px;
     }
     #di1{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 300px;
     }
     time{
         width: 200px;
         padding-top: 7px;
-        padding-right: 20px;
+        margin-right: -60px;
         color: grey;
     }
     p{
         width: 400px;
+        font-size: 18px;
     }
+    #libu1{
+        width: 100px;
+        border-radius: 5px;
+        background-color: black;
+        color: aliceblue;
+        transition: 1s;
+    }#libu1:hover{
+        filter: invert();
+    }
+    /*---------------post_edit.html-------------------------------------------------*/
+    .post-form{
+        margin-left: 10%;
+        background-color: rgba(63, 62, 62, 0.255);
+        width: 600px;
+        padding: 10px;
+        border-radius: 5px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+    }
+    #poEd{
+        margin-left: 10%;
+        font-size: 50px;
+        color: rgb(0, 153, 255);
+    }
+    #bute{
+        width: 100px;
+        border-radius: 5px;
+        background-color: black;
+        color: aliceblue;
+        transition: 1s;
+    }#bute:hover{
+        filter: invert();
+    }
+    label{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    input[type=text]{
+        width: 500px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-right-radius: none;
+        border-bottom-left-radius: none;
+        border-bottom: 3px solid black;
+        padding: 5px;
+    }
+    textarea{
+        width: 500px;
+        height: 150px;
+        background-color: aliceblue;
+        border-radius: 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom-right-radius: none;
+        border-bottom-left-radius: none;
+        border-bottom: 3px solid black;
+        padding: 5px;
+    }
+
+    /*---------------post_detail.html-------------------------------------------------*/
 
 </style>

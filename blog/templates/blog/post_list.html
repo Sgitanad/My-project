@@ -8,7 +8,7 @@
                 <time>published: {{ post.published_date }}</time>
             </div>
             <p>{{ post.text|linebreaksbr }}</p>
-            <a href="after.html" >
+            <a href="{% url 'post_after' %}" >
                 <input type="button" value="Buy" id="libu1" >
             </a>    
         </article>

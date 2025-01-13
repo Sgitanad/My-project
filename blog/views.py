@@ -4,7 +4,15 @@ from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
+
+def base_view(request):
+    return render(request, 'blog/base.html')
+
+def post_after_view(request):
+    return render(request, 'blog/post_after.html')
+    
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'blog/post_list.html', {'posts': posts})

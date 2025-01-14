@@ -5,9 +5,9 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.shortcuts import redirect
 from django.http import HttpResponse
+from django.contrib.auth.models import AnonymousUser
 
-
-def base_view(request):
+def base(request):
     return render(request, 'blog/base.html')
 
 def post_after_view(request):

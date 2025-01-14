@@ -14,11 +14,6 @@
                 {% endif %}
             </div>
             <p>{{ post.text|linebreaksbr }}</p>
-            <!--
-            <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
-                {% include './icons/pencil-fill.svg' %}
-            </a>
-            -->
         </article>
     {% endfor %}
 {% endblock %}

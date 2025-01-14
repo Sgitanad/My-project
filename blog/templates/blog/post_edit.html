@@ -5,6 +5,6 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <button id="bute" type="submit" class="save btn btn-secondary">Save</button>
+        <a href="{% url 'base' %}"><button id="bute" type="submit" class="save btn btn-secondary">Save</button></a>
     </form>
 {% endblock %}
